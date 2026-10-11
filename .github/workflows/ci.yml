@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        cc: [gcc, clang]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compilar (sem avisos)
+        run: make CC=${{ matrix.cc }} CFLAGS="-O2 -g -Werror"
+      - name: Testes
+        run: make teste CC=${{ matrix.cc }}
+      - name: Testes com AddressSanitizer e UndefinedBehaviorSanitizer
+        run: make sanitizado CC=${{ matrix.cc }}
+      - name: Demonstração
+        run: make CC=${{ matrix.cc }} && cd build && ./ed demo && ./ed palavras ../dados/texto-exemplo.txt bo && ./ed hash-experimento 14

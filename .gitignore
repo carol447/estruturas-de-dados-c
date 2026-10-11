@@ -1,0 +1,11 @@
+build/
+bin/
+obj/
+*.o
+*.exe
+*.wasm
+*.idx
+*.bin
+*.tmp.*
+*.layout
+*.depend

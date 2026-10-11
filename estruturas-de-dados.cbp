@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="estruturas-de-dados" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="ed">
+				<Option output="build/ed" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/obj/ed/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="demo" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="teste_bplus">
+				<Option output="build/teste_bplus" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/obj/teste_bplus/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="teste_tries">
+				<Option output="build/teste_tries" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/obj/teste_tries/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="teste_hash">
+				<Option output="build/teste_hash" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/obj/teste_hash/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="teste_ordenacao">
+				<Option output="build/teste_ordenacao" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/obj/teste_ordenacao/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c11" />
+			<Add option="-Wall" />
+			<Add option="-Wextra" />
+			<Add option="-Wpedantic" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="m" />
+		</Linker>
+		<Unit filename="include/ed/arquivo.h" />
+		<Unit filename="include/ed/bplus.h" />
+		<Unit filename="include/ed/hash.h" />
+		<Unit filename="include/ed/memoria.h" />
+		<Unit filename="include/ed/ordenacao_externa.h" />
+		<Unit filename="include/ed/patricia.h" />
+		<Unit filename="include/ed/radix.h" />
+		<Unit filename="include/ed/registro.h" />
+		<Unit filename="src/bplus.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="src/hash.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="src/memoria.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="src/ordenacao_externa.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="src/patricia.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="src/radix.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="src/registro.c"><Option compilerVar="CC" /></Unit>
+		<Unit filename="app/ed.c">
+			<Option compilerVar="CC" />
+			<Option target="ed" />
+		</Unit>
+		<Unit filename="tests/teste.h">
+			<Option target="teste_bplus" />
+			<Option target="teste_tries" />
+			<Option target="teste_hash" />
+			<Option target="teste_ordenacao" />
+		</Unit>
+		<Unit filename="tests/teste_bplus.c">
+			<Option compilerVar="CC" />
+			<Option target="teste_bplus" />
+		</Unit>
+		<Unit filename="tests/teste_tries.c">
+			<Option compilerVar="CC" />
+			<Option target="teste_tries" />
+		</Unit>
+		<Unit filename="tests/teste_hash.c">
+			<Option compilerVar="CC" />
+			<Option target="teste_hash" />
+		</Unit>
+		<Unit filename="tests/teste_ordenacao.c">
+			<Option compilerVar="CC" />
+			<Option target="teste_ordenacao" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
